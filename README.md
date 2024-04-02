@@ -2,7 +2,7 @@
 
 # Descripción 
 En este proyecto tendremos un servicio para buscar los factores de un numero y los primos menores o iguales de un numero dado usando roundrobin.
-## Video probando instancia EC2
+## Video probando instancia EC2 probando el roundRobin
 
 
 ## DESARROLLADO CON
@@ -20,7 +20,7 @@ git clone https://github.com/Sebasian-Cepeda/examen2.git
 ```bash
 mvn clean install
 ```
-4. con ayuda del IDE que se esta usando podemos correr la clase LogServerFacade y la clase main
+4. con ayuda del IDE que se esta usando podemos correr la clase main
 5. Podemos abrir en el brawser http://localhost:4567 y optenemos los formularios
    ![image](https://github.com/Sebasian-Cepeda/examen2/assets/89321404/210eed96-5d16-4218-b520-9d9ea00595c4)
 
