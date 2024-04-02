@@ -3,7 +3,7 @@
 # Descripción 
 En este proyecto tendremos un servicio para buscar los factores de un numero y los primos menores o iguales de un numero dado usando roundrobin.
 ## Video probando instancia EC2
-https://github.com/Sebasian-Cepeda/lab6AREP-aws/assets/89321404/56589ee2-ec8d-4d79-8684-810c24b5dc86
+
 
 ## DESARROLLADO CON
 * [Java version 17](https://www.oracle.com/co/java/technologies/downloads/) - Lenguaje de programación usado.
