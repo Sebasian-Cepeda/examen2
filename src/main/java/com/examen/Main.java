@@ -1,11 +1,19 @@
 package com.examen;
 
-import spark.Spark.*;
+
+import static spark.Spark.*;
 
 public class Main {
     public static void main(String... args){
         port(getPort());
-        get("/hello", (req,res) -> "Hello Docker!");
+        staticFileLocation("public");
+        get("/primos", (req,res) -> Service.primos(req.queryParams("value")));
+        get("/factores", (req,res) -> Service.factores(req.queryParams("value")));
+  }
+
+
+  public static String primo(String value){
+    return null;
   }
 
   private static int getPort() {
@@ -15,3 +23,4 @@ public class Main {
       return 4567;
   }
 }
+

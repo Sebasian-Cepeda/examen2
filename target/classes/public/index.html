@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Form Example</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <h1>Form with GET</h1>
-        <form action="/hello">
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name" value="John"><br><br>
+
+<head>
+    <title>Math</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <h1>Form Factores</h1>
+        <form action="/factores">
+            <label for="name">Factores:</label><br>
+            <input type="text" id="name" name="name" placeholder="1"><br><br>
             <input type="button" value="Submit" onclick="loadGetMsg()">
         </form> 
         <div id="getrespmsg"></div>
@@ -22,9 +25,34 @@
                     document.getElementById("getrespmsg").innerHTML =
                     this.responseText;
                 }
-                xhttp.open("GET", "/hello?name="+nameVar);
+                xhttp.open("GET", "/factores?value="+nameVar);
                 xhttp.send();
             }
         </script>
-    </body>
+    
+    <h1>Form Primos</h1>
+        <form action="/primos">
+            <label for="name">Primos:</label><br>
+            <input type="text" id="nameP" name="nameP" placeholder="1"><br><br>
+            <input type="button" value="Submit" onclick="loadGetMsgP()">
+        </form> 
+        <div id="getrespmsgP"></div>
+
+        <script>
+            function loadGetMsgP() {
+                let nameVar = document.getElementById("nameP").value;
+                const xhttp = new XMLHttpRequest();
+                xhttp.onload = function() {
+                    document.getElementById("getrespmsgP").innerHTML =
+                    this.responseText;
+                }
+                xhttp.open("GET", "/primos?value="+nameVar);
+                xhttp.send();
+            }
+        </script>
+    
+
+    
+</body>
+
 </html>
