@@ -21,7 +21,7 @@ import org.slf4j.LoggerFactory;
 public class Invoke {
 
     private static final String USER_AGENT = "Mozilla/5.0";
-    private static final List<Integer> PORTS = Arrays.asList(35001, 35002);
+    private static final List<Integer> PORTS = Arrays.asList(4569, 4570);
     private static final List<String> DOMAINS = Arrays.asList("logservice1", "logservice2");
     private static final List<String> LOG_SERVICE_URLS = generateUrls();
     private static final Logger LOGGER = LoggerFactory.getLogger(Invoke.class);
