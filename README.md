@@ -26,7 +26,7 @@ mvn clean install
 
 
 # Diseño
- El código proporcionado consiste en varias clases que forman un sistema para el manejo de logs utilizando Spark y MongoDB en un entorno de AWS.
+ El código proporcionado consiste en una clase Invoke la cual permite el roundRobin, una clase main y una clase LogServerFacade las cuales permiten correr los servidores y una clae service la cual encuentras los factores y los primos.
  
 
 
