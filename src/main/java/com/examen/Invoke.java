@@ -22,7 +22,7 @@ public class Invoke {
 
     private static final String USER_AGENT = "Mozilla/5.0";
     private static final List<String> DOMAINS = Arrays.asList("ec2-23-22-207-186.compute-1.amazonaws.com:5000",
-            "ec2-54-236-119-146.compute-1.amazonaws.com:5001");
+            "ec2-54-146-154-98.compute-1.amazonaws.com:5001");
     private static final List<String> LOG_SERVICE_URLS = generateUrls();
     private static final Logger LOGGER = LoggerFactory.getLogger(Invoke.class);
     private static int currentService = 0;
