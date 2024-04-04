@@ -21,8 +21,8 @@ import org.slf4j.LoggerFactory;
 public class Invoke {
 
     private static final String USER_AGENT = "Mozilla/5.0";
-    private static final List<Integer> PORTS = Arrays.asList(4569, 4570);
-    private static final List<String> DOMAINS = Arrays.asList("logservice1", "logservice2");
+    private static final List<String> DOMAINS = Arrays.asList("ec2-23-22-207-186.compute-1.amazonaws.com:5000",
+            "ec2-54-236-119-146.compute-1.amazonaws.com:5001");
     private static final List<String> LOG_SERVICE_URLS = generateUrls();
     private static final Logger LOGGER = LoggerFactory.getLogger(Invoke.class);
     private static int currentService = 0;
@@ -39,8 +39,8 @@ public class Invoke {
      * @return The response from the GET request.
      * @throws IOException
      */
-    public static String invoke(String message) throws IOException {
-        URL logService = getUrl(message);
+    public static String invoke(String message, String value) throws IOException {
+        URL logService = getUrl(message, value);
         LOGGER.info("GET {}", logService);
         HttpURLConnection con = null;
         try {
@@ -79,10 +79,10 @@ public class Invoke {
      * @return the URL of the logService
      * @throws MalformedURLException
      */
-    private static URL getUrl(String message) throws MalformedURLException {
+    private static URL getUrl(String message, String value) throws MalformedURLException {
         String getUrl = LOG_SERVICE_URLS.get(currentService);
         currentService = (currentService + 1) % LOG_SERVICE_URLS.size();
-        return new URL(getUrl + "?message=" + message);
+        return new URL(getUrl + message + "?value=" + value);
     }
 
     /**
@@ -93,8 +93,8 @@ public class Invoke {
      */
     private static List<String> generateUrls() {
         List<String> urls = new ArrayList<>();
-        for (int i = 0; i < PORTS.size(); i++) {
-            urls.add("http://" + DOMAINS.get(i) + ":" + PORTS.get(i) + "/logServiceFacade");
+        for (int i = 0; i < DOMAINS.size(); i++) {
+            urls.add("http://" + DOMAINS.get(i));
         }
         return urls;
     }

@@ -44,6 +44,7 @@ out/
 *.DS_Store
 ehthumbs.db
 Thumbs.db
+*.pem
 
 # Archivos de entornos de desarrollo
 .idea/
@@ -156,4 +157,3 @@ yarn-error.log*
 /node_modules
 package-lock.json
 yarn.lock
-
