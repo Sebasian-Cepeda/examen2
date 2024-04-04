@@ -29,7 +29,7 @@ mvn clean install
 
 5.con ayuda del IDE que se esta usando podemos correr la clase main o tambien puede usar el siguiente comando
 ```bash
-"target/classes;target/dependency/*" com.examen.Main
+java -cp "target/classes;target/dependency/*" com.examen.Main
 ```
 6. Podemos abrir en el brawser http://localhost:4567 y optenemos los formularios los cuales retornan un json como respuesta 
    ![image](https://github.com/Sebasian-Cepeda/examen2/assets/89321404/31af8998-4c9c-4246-a03d-0f70069d6f6f)
